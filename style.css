@@ -1,0 +1,54 @@
+h1{
+    text-align:center;
+}
+.album{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.pic{
+    width:48%;
+    border:solid grey thin;
+    transition: all 0.5s ease;
+    overflow:hidden;
+}
+.pic:hover{
+    background-color: rgb(17, 193, 176);
+}
+
+.pic p{
+    padding-left: 1.2rem;
+}
+
+.pic img{
+    max-width:100%;
+    aspect-ratio: 1/ 1; 
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease;
+}
+
+.pic:hover img{
+    transform:translate(0,-5px) scale(1.05);
+    filter:sepia(0.5);
+}
+
+
+@media screen and (min-width:768px) {  
+   .pic{
+        width:32%;
+   }
+}
+
+@media screen and (min-width:1024px) {  
+    .pic{
+         width:24%;
+    }
+ }
+
+@media screen and (min-width:1440px) {  
+    .pic{
+         width:16%;
+    }
+ }
